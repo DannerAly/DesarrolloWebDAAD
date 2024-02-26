@@ -1,0 +1,48 @@
+body { 
+    background-color: rgb(7, 34, 46);
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
+h2{
+    font-family: sans-serif;
+}
+
+h3 {
+    color: azure;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a img {
+    border-radius: 200px;
+    background-color: azure;
+}
+
+.titulo {
+    background-color: rgb(0, 132, 255);
+    color: azure;
+    padding: 10px;
+    border: 3px solid #8b5709;
+}
+
+.tituloDeTabla {
+    color: azure;
+}
+
+a {
+    font-family: 'Courier New', Courier, monospace;
+    color: #8b5709;
+}
+
+
+.miTabla td, .miTabla tr {
+
+    font-family: 'Courier New', Courier, monospace;
+    color: azure;
+
+}
+.amigos{
+    border-radius: 20px;
+}
