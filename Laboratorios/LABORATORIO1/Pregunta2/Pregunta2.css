@@ -1,0 +1,225 @@
+/*FONT*/
+div{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.widgets{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.widIzq{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.widDer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+ }
+
+ div{
+    padding-left: 10px;
+    padding-right: 10px;
+    
+ }
+
+
+ /*ENCABEZADO*/
+
+ .encabezado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
+ .titulo{
+    color: green;
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    
+ }
+
+ a img:hover{
+    filter: grayscale(100%);
+ }
+
+ .main{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: flex-start;
+    
+ }
+
+ section{
+    color: aliceblue;
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+ }
+ section:hover{
+    background-color: grey;
+ }
+
+ .widDera a{
+    color: black;
+ }
+
+ .widDer a:link, .widDer a:visited{
+    text-decoration: none;
+    color: black;
+ }
+
+ section a:link, section a:visited {
+    text-decoration: none;
+    color: aliceblue;
+ }
+ ul.menu li a:link, ul.menu li a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+#suscribete{
+    background-color: yellow;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 13px;
+    padding-right: 20px;
+    margin-top: 0 auto;
+   
+}
+
+ /*colores de fondo */
+
+ #green{
+    background-color: green;
+ }
+
+ #pink{
+    background-color: rgb(228, 49, 79);
+ }
+
+ #orange{
+    background-color: rgb(255, 145, 0);
+
+ }
+
+ #purple{
+    background-color: rgb(221, 0, 192);
+ }
+
+.mainEmpresarial{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(224, 224, 224);
+}
+
+.imgs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.imagenesGris a{
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+   
+}
+
+.imagenGris a:hover {
+    filter: none;
+}
+
+.imagenesGris{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.espacioEmp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*CONTENIDO*/
+
+.contenido{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    
+}
+
+.contenidoCent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenidoCent img{
+    padding-top: 30px;
+    
+   
+}
+.contenidoCentAb{
+    display: flex;
+    flex-direction: row;
+ 
+    justify-content: space-between;
+}
+
+.contenidoCentAb img{
+    padding-top: 10px;
+
+
+}
+
+.nota{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nota div p{
+    padding-left: 10px;
+    width: 240px;
+}
+
+#hora{
+    color: grey;
+    background-color: white;
+}
+
+
+.subtitulos h4 {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-right: 2px;
+    width: 110px;
+    color: aliceblue;
+    background-color: green;
+}
+
+div{
+    width: auto;
+}
+
+img{
+    width: auto;
+}
+
+#publicidadAutos{
+    width: 1000px;
+}

@@ -1,0 +1,174 @@
+.encabezado {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    height: auto;
+    border: 1px solid black;
+
+
+}
+
+/*LOGOS*/
+.usfxContainer {
+    display: flex;
+    width: 35%;
+    justify-content: flex-start;
+}
+
+.escudoTecnoContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 35%;
+
+}
+
+.usfxContainer #usfxlogo {
+    width: auto;
+    height: 70px;
+}
+
+#escudoTecno {
+    width: 70px;
+    height: 70px;
+    padding-right: 15%;
+}
+
+
+
+.letrasencabezado {
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-grow: 2;
+}
+
+.facultad {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*COLORES*/
+
+#fondoCeleste {
+    background-color: #4C9BD3;
+}
+
+#fondoRed {
+    background-color: #FF0000;
+}
+
+#fondoYellow {
+    background-color: #FFFF00;
+}
+
+#fondoGreen {
+    background-color: #00B050;
+}
+
+#fondoPlomo {
+    background-color: aliceblue;
+}
+
+#fondoBlue {
+    background-color: #366F91;
+}
+
+#red {
+    color: #FF0000;
+}
+
+#celeste {
+    color: #4C9BD3;
+}
+
+#yellow {
+    color: #FFFF00;
+}
+
+#green {
+    color: #00B050;
+}
+
+
+
+
+
+
+/*TIPO DE LETRAS*/
+
+.carrera {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    align-items: center;
+}
+
+
+h4 {
+    margin: 0;
+
+    font-family: Arial;
+
+}
+
+div {
+    font-family: arial;
+}
+
+/*CUERPO*/
+
+.cuerpo {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    height: auto;
+    border: 1px solid black;
+}
+
+.itemsCuerpo {
+
+    width: 770px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.preguntas {
+    display: flex;
+    flex-direction: row;
+    width: 130px;
+    background-color: #366F91;
+
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.piePag {
+    display: flex;
+    background-color: #4C9BD3;
+    border: 1px solid black;
+    width: 900px;
+    height: 50px;
+    justify-content: center;
+}
+
+.der {
+    padding-top: 5px;
+}
