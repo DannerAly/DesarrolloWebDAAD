@@ -1,0 +1,2 @@
+Realizar una pagina que me solicite un numero n, luego esta pagina llame a llenar.php 
+que me permite llenar n numeros y llamar a la pagina suma.php que muestra el resultado de la suma
