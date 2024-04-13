@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .margen{
+            display: flex;
+            flex-direction: row;
+            width: 500px;
+            height: 100px;
+            border: 5px solid orange;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .botonesBlancos {
+         border: 2px solid rgb(255, 166, 0);
+            padding: 10px;
+            width: 100px;
+            background-color: rgb(255, 166, 0);
+         color: white;
+         justify-content: center;
+        }
+
+        .input{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="margen">
+    <form action="tabla.php" method="post">
+
+        
+        <label for="">operacion</label>
+        <select name="operacion" id="">
+            <option value="suma">Suma</option>
+            <option value="resta">Resta</option>
+            <option value="multiplicacion">Multiplicacion</option>
+            <option value="division">Division</option>
+        </select>
+        <label for="">n</label>
+        <input type="number" name="n"><br>
+        <div class="input">
+
+        <input class="botonesBlancos" type="submit" value="generar">
+        </div>
+
+    </form>
+    </div>
+</body>
+</html>
