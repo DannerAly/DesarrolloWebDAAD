@@ -66,7 +66,7 @@
 
         for ($i = 0; $i <= $n; $i++) {
             echo "<tr>";    
-            for ($j = 0; $j <= $nx; $j++) {
+            for ($j = 0; $j <= $n; $j++) {
                 if ($i == 0 && $j == 0) {
                     echo "<th></th>";
                 } elseif ($i == 0) {
