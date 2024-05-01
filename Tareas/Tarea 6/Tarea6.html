@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #resultadox1 {
+            color: black;
+        }
+        
+        #resultadox2 {
+            color: black;
+        }
+
+        #resultadox1Rojo {
+            color: red;
+        }
+        
+        #resultadox2Rojo {
+            color: red;
+        }
+        
+    </style>
+    <title>Raiz de 2do grado</title>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="a">Introduce a</label>
+        <input type="number" name="a" id="a" onchange="limpiar()">
+        <br>
+
+        <label for="b">Introduce b</label>
+        <input type="number" name="b" id="b" onchange="limpiar()">
+        <br>
+
+        <label for="c">Introduce c</label>
+        <input type="number" name="c" id="c" onchange="limpiar()">
+        <br>
+        <br>
+
+        <input type="button" value="Calcular" onclick="operacion()">
+
+
+        <div id="resultadox1">&nbsp;</div>
+        <div id="resultadox2">&nbsp;</div>
+
+        <script>
+
+            function operacion() {
+                var a = parseFloat(document.getElementById("a").value);
+                var b = parseFloat(document.getElementById("b").value);
+                var c = parseFloat(document.getElementById("c").value);
+
+                var discriminante = b * b -4 * a * c;
+
+                if (discriminante >= 0) {
+                    var x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+                    var x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+
+                    document.getElementById("resultadox1").innerHTML = "x1 = " + x1;
+                    document.getElementById("resultadox2").innerHTML = "x2 = " + x2;
+                } else {
+                    var terminoReal = -b / (2 * a);
+
+                    var terminoImaginario = Math.sqrt(Math.abs(discriminante)) / (2 * a)
+
+                    document.getElementById("resultadox1").innerHTML = "X1 = " + terminoReal + " + " + terminoImaginario + " i";
+                    document.getElementById("resultadox2").innerHTML = "X2 = " + terminoReal + " - " + terminoImaginario + " i";
+                    
+                    document.getElementById("resultadox1").id = "resultadox1Rojo";
+                    document.getElementById("resultadox2").id = "resultadox2Rojo";
+                }
+            }
+
+
+
+
+
+            function limpiar() {
+                document.getElementById("resultadox1Rojo").id = "resultadox1";
+                document.getElementById("resultadox2Rojo").id = "resultadox2";
+               
+                document.getElementById("resultadox1").innerHTML = " "
+                document.getElementById("resultadox2").innerHTML = " "
+               
+                
+            }
+        </script>
+
+
+    </form>
+
+
+</body>
+
+</html>
