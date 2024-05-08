@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 DOM</title>
+    <style>
+        .contenedor{
+            display: flex;
+            flex-wrap: wrap;
+            width: 1000px;
+        }
+
+        img{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <img src="images/314705498_1842801536113696_5767736930012456105_n.jpg" class="imagen" id="img0" onmouseover="mostrar('img0')" onmouseleave="normal('img0')">
+        <img src="images/agus.00_00_10_01.Imagen fija001.png" class="imagen" id="img1"onmouseover="mostrar('img1')" onmouseleave="normal('img1')">
+        <img src="images/agus.00_00_10_01.Imagen fija003.png" class="imagen" id="img2" onmouseover="mostrar('img2')" onmouseleave="normal('img2')">
+        <img src="images/agus.00_01_12_03.Imagen fija004.jpeg" class="imagen" id="img3"onmouseover="mostrar('img3')" onmouseleave="normal('img3')">
+        <img src="images/agus.00_01_12_03.Imagen fija004.png" class="imagen" id="img4" onmouseover="mostrar('img4')" onmouseleave="normal('img4')">
+        <img src="images/Captura de pantalla 2024-01-06 224537.png" class="imagen" id="img5" onmouseover="mostrar('img5')" onmouseleave="normal('img5')">
+        <img src="images/photo_4909147435100646561_y.jpg" class="imagen" id="img6" onmouseover="mostrar('img6')" onmouseleave="normal('img6')">
+        <img src="images/Runway 2024-02-27T18_40_40.554Z Expand Image.jpg"id="img7" class="imagen" onmouseover="mostrar('img7')" onmouseleave="normal('img7')">
+        <img src="images/Runway 2024-02-27T18_44_08.471Z Expand Image.jpg" id="img8" class="imagen" onmouseover="mostrar('img8')" onmouseleave="normal('img8')">
+        <img src="images/xxxx.png" class="imagen" id="img9" onmouseover="mostrar('img9')" onmouseleave="normal('img9')">
+    </div>
+
+
+    <script>
+        function mostrar(id){
+            document.getElementById(id).style.width = "200px"
+            
+            document.getElementById(id).style.height = "200px"
+        }
+
+        function normal(id){
+            document.getElementById(id).style.width = "100px"
+            
+            document.getElementById(id).style.height = "100px"
+        }
+
+    </script>
+
+
+</body>
+</html>

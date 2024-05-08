@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+
+        <label for="">Nombre:</label><br>
+        <input type="text" id="nombre"><br>
+        <label for="">Correo:</label><br>
+        <input type="email" id="correo"><br>
+        <label for="">Mensaje:</label><br>
+        <input type="text" id="mensaje"><br>
+        <input type="button" id="enviar" value="Enviar" onclick="verificar()"><br>
+        <div id="alert">
+            &nbsp;
+        </div>
+    </form>
+
+    <script>
+
+        nombre = document.getElementById("nombre")
+        correo = document.getElementById("correo")
+        mensaje = document.getElementById("mensaje")
+        enviar = document.getElementById("enviar")
+
+        var alerta = document.getElementById("alert")
+
+
+        function verificar() {
+
+            alerta.innerHTML == ""
+
+
+            if (nombre.value == "" && correo.value == "" && mensaje.value == "") {
+                alerta.innerHTML = "Debe ingresar el Nombre <br>"
+                alerta.innerHTML += "Debe ingresar el correo <br>"
+                alerta.innerHTML += "Debe ingresar el mensaje <br>"
+            } else {
+
+                if (nombre.value == "" && correo.value == "") {
+                    alerta.innerHTML = "Debe ingresar el Nombre <br>"
+                    alerta.innerHTML += "Debe ingresar el correo <br>"
+                } else {
+
+                    if (correo.value == "" && mensaje.value == "") {
+                        alerta.innerHTML = "Debe ingresar el correo <br>"
+                        alerta.innerHTML += "Debe ingresar el mensaje <br>"
+                    } else {
+
+                        if (nombre.value == "" && mensaje.value == "") {
+                            alerta.innerHTML = "Debe ingresar el Nombre <br>"
+                            alerta.innerHTML += "Debe ingresar el mensaje <br>"
+                        } else {
+
+                            if (nombre.value == "") {
+                                alerta.innerHTML = "Debe ingresar el Nombre <br>"
+                            }
+
+
+                            if (correo.value == "") {
+                                alerta.innerHTML = "Debe ingresar el correo <br>"
+                            }
+
+                            if (mensaje.value == "") {
+                                alerta.innerHTML = "Debe ingresar el mensaje <br>"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
