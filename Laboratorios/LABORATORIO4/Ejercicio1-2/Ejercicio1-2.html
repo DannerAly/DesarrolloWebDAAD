@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #tabla {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            background-color: rgb(200, 223, 248);
+        }
+
+        .filagris {
+            background-color: rgb(192, 190, 190);
+        }
+
+        .mejorAlumno {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="tabla">
+        <tr>
+            <th>Nro</th>
+            <th>Apellidos y Nombres</th>
+            <th>Edad</th>
+            <th>Materia</th>
+            <th>Nota</th>
+        </tr>
+    </table>
+    <br>
+    <h2>Añadir estudiante</h2>
+
+    <label for="apellidosNombres">Apellidos y Nombres:</label>
+    <input type="text" id="apellidosNombres" required><br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" required><br><br>
+
+    <label for="materia">Materia:</label>
+    <input type="text" id="materia" required><br><br>
+
+    <label for="nota">Nota:</label>
+    <input type="number" id="nota" required><br><br>
+
+    <button type="button" onclick="AnadirEstudiante()">Añadir Estudiante</button>
+    <button type="button" onclick="mejorAlumno()">Mostrar Mejor Alumno</button>
+
+    <script>
+
+        var tabla = document.getElementById("tabla");
+        var estudiantes = [
+            {
+                ApellidosNombres: "Juan Perez",
+                edad: 25,
+                Calificaciones: [
+                    {
+                        Materia: "sis-256",
+                        Nota: 83
+                    }
+                ]
+            },
+            {
+                ApellidosNombres: "Ricardo Luna",
+                edad: 30,
+                Calificaciones: [
+                    {
+                        Materia: "sis-258",
+                        Nota: 70
+                    }
+                ]
+            }
+            ,
+            {
+                ApellidosNombres: "Teresa Tomasa",
+                edad: 26,
+                Calificaciones: [
+                    {
+                        Materia: "sis-256",
+                        Nota: 84
+                    }
+                ]
+            },
+
+            {
+                ApellidosNombres: "Fabian Umbre",
+                edad: 24,
+                Calificaciones: [
+                    {
+                        Materia: "sis-258",
+                        Nota: 70
+                    }
+                ]
+            }
+        ];
+
+        function Mostrar() {
+            var cantidadEstudiantes = estudiantes.length;
+            for (var i = 0; i < cantidadEstudiantes; i++) {
+
+                var nuevaFila = document.createElement("tr");
+
+                if (i % 2 == 1) {
+                    nuevaFila.classList.add("filagris");
+                }
+
+                nuevaFila.innerHTML = `
+                    <td>${i + 1}</td>
+                    <td>${estudiantes[i].ApellidosNombres}</td>
+                    <td>${estudiantes[i].edad}</td>
+                    <td>${estudiantes[i].Calificaciones[0].Materia}</td>
+                    <td>${estudiantes[i].Calificaciones[0].Nota}</td>`;
+
+                tabla.appendChild(nuevaFila);
+
+            }
+
+        }
+
+        Mostrar();
+        var x = 0
+        function AnadirEstudiante() {
+            var apellidosNombres = document.getElementById("apellidosNombres").value;
+            var edad = document.getElementById("edad").value;
+            var materia = document.getElementById("materia").value;
+            var nota = document.getElementById("nota").value;
+
+            var nuevoEstudiante = {
+                ApellidosNombres: apellidosNombres,
+                edad: edad,
+                Calificaciones: [
+                    {
+                        Materia: materia,
+                        Nota: nota
+                    }
+                ]
+            };
+
+            estudiantes.push(nuevoEstudiante);
+            var nuevaFila = document.createElement("tr");
+            if (x % 2 == 1) {
+                    nuevaFila.classList.add("filagris");
+                }
+
+            nuevaFila.innerHTML = `
+                <td>${estudiantes.length}</td>
+                <td>${apellidosNombres}</td>
+                <td>${edad}</td>
+                <td>${materia}</td>
+                <td>${nota}</td>`;
+            tabla.appendChild(nuevaFila);
+            x += 1
+        }
+
+
+
+        function mejorAlumno() {
+
+            var filas = tabla.rows;
+            for (var i = 1; i < filas.length; i++) {
+                filas[i].classList.remove("mejorAlumno");
+            }
+
+            var notaMasAlta = 0;
+            var mejorEstudianteIndex = 0;
+
+            for (var i = 0; i < estudiantes.length; i++) {
+                var notaActual = estudiantes[i].Calificaciones[0].Nota;
+
+                if (notaActual > notaMasAlta) {
+                    notaMasAlta = notaActual;
+                    mejorEstudianteIndex = i;
+                }
+            }
+
+
+            var filaMejorEstudiante = tabla.rows[mejorEstudianteIndex + 1];
+            filaMejorEstudiante.classList.add("mejorAlumno");
+        }
+
+
+    </script>
+</body>
+
+</html>

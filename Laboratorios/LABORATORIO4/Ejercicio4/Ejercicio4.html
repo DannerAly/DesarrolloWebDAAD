@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <style>
+        .yellow-background {
+            background-color: yellow;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Lista de Compras</h2>
+    <div id="lista">
+        <input type="text" id="elemento" placeholder="Ingrese un elemento">
+        <button onclick="agregarElemento()">Añadir</button>
+        <ul id="listaCompras"></ul>
+    </div>
+
+    <script>
+        function agregarElemento() {
+            var elementoInput = document.getElementById("elemento");
+            var elemento = elementoInput.value.trim();
+            if (elemento !== "") {
+                var lista = document.getElementById("listaCompras");
+                var nuevoElemento = document.createElement("li");
+                var contenidoElemento = document.createElement("span");
+                if (elemento.toLowerCase().includes(" de ")) {
+                    contenidoElemento.classList.add("yellow-background");
+                }
+                contenidoElemento.textContent = elemento;
+                nuevoElemento.appendChild(contenidoElemento);
+                lista.appendChild(nuevoElemento);
+                elementoInput.value = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
