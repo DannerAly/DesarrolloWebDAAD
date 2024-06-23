@@ -23,7 +23,7 @@ td {
 	font-size: 10px; 
 	color: #666666; 
 } 
- 
+	
 </style> 
 </head> 
 <body> 
@@ -35,9 +35,12 @@ $dia = date("j");
 $mes = date("n"); 
 $diasemana = date("w"); 
 $hoy = $nomdia[$diasemana]." ".$dia." de ".$nommes[$mes-1]." ".date("Y").""; 
-
+/*
 $mes=$_GET['mes']; 
 $anio=$_GET['anio']; 
+*/
+$mes= 11 ; 
+$anio= "2022"; 
 
 $days = cal_days_in_month(CAL_GREGORIAN, $mes, $anio); 
 $days2Use = array(); 

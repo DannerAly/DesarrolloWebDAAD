@@ -1,19 +1,61 @@
 <form action="" method="post" id="datosCalendar">
 
-    <select name="" id="">
-        <option value="Enero"></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
+    <select name="mes" id="mes">
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
     </select>
 
+    <select name="anio" id="anio" onclick="generarSelectsAnio()">
+
+        <!-- <option value="2000"></option>
+        <option value="2001"></option>
+        <option value="2002"></option>
+        <option value="2003"></option>
+        <option value="2004"></option>
+        <option value="2005"></option>
+        <option value="2006"></option>
+        <option value="2007"></option>
+        <option value="2008"></option>
+        <option value="2009"></option>
+        <option value="2010"></option>
+        <option value="2011"></option>
+        -->
+
+
+    </select>
 
 </form>
+
+<script>
+
+    function generarSelectsAnio() {
+
+        var option = document.createElement("option");
+        var calendar = document.getElementById("anio");
+        for (i = 1990; i < 2024; i++) {
+            nuevoOption = option.innerHTML(`${i}`)
+
+        }
+        /*
+        calendar.innerHTML = () => {
+            for (i = 1990; i < 2024; i++) {
+                nuevoOption = option.innerHTML(`${i}`)
+
+            }
+        }*/
+
+        calendar.innerHTML += "danner"
+
+    }
+
+</script>
